@@ -1,0 +1,110 @@
+body {
+    background-color: #cfc7c0;
+}
+
+.calc {
+    position: relative;
+    margin: 70px auto 0px;;
+    width: 600px;
+    color: #c7b9b9;
+    font-family: Arial;
+    user-select: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.screen {
+    position: absolute;
+    height: 190px;
+    padding: 10px 10px 5px 20px;
+    display: grid;
+    right: 26px;
+    bottom: 687px;
+    
+    justify-items: end;
+    align-items: end;
+    text-align: right;
+    font-size: 5rem;
+    word-break: break-all;
+    overflow: hidden;
+    user-select: text;
+}
+
+.button {
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    display: grid;
+    grid-template-areas:
+    "CA divis mult del"
+    "seven eight nine plus"
+    "four five six minus"
+    "one two three equal"
+    "percent zero dot equal";
+    grid-gap: 10px 20px;
+    right: 39px;
+    bottom: 26px;
+    
+}
+
+.btn {
+    width: 93px;
+    gap: 93px;
+    padding: 5px 5px;
+    display: flex;
+    background: #383a3f;
+    border-radius: 50%;
+    border: 7px solid #383a3f;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 93px;
+    font-size: 3rem;
+    
+    cursor: pointer;
+}
+
+.btn.equal {
+    grid-area:  equal;
+    height: 220px;
+    border-radius: 50px;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        filter: brightness(120%);
+    }
+}
+
+@media (hover: none) {
+    .btn:active {
+        filter: brightness(80%);
+    }
+} 
+
+.btn:active {
+    filter: brightness(80%)
+}
+
+.btn.green-circuit {
+    color: #5c6b66;
+    font-weight: bold;
+    border-color: #5c6b66;
+}
+
+.btn.white-circuit {
+    color: #c7b9b9;
+    border-color: #c7b9b9;
+    font-weight: bold;
+}
+
+.btn.bg-green {
+    border-color: #5c6b66;
+    background: #5c6b66;
+    font-weight: bold;
+    color: #383a3f;
+}
